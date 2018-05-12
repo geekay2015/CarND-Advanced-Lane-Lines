@@ -9,6 +9,7 @@ In this project, my goal was to write a software pipeline to identify the lane b
 
 **Project Code**
 [MyProjectCode](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.ipynb)
+
 **Project Output Video**
 https://youtu.be/EOi2E8rn2NQ
 
