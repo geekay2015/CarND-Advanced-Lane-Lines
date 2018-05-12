@@ -1069,31 +1069,14 @@ img_path = TST_IMG_PATH + 'test*.jpg'
 radiusOfCurvature(img_path, 'Radius of Curvature Test')
 ```
 
-    test_images  6
-    ./output_images/Test Image 1
-    Left Radius of Curvature: 8598.589955 pixels
-    Right Radius of Curvature: 1043.128913 pixels
-    
-    ./output_images/Test Image 2
-    Left Radius of Curvature: 2569.221597 pixels
-    Right Radius of Curvature: 5177.963706 pixels
-    
-    ./output_images/Test Image 3
-    Left Radius of Curvature: 12397.838429 pixels
-    Right Radius of Curvature: 2824.754859 pixels
-    
-    ./output_images/Test Image 4
-    Left Radius of Curvature: 6091.692407 pixels
-    Right Radius of Curvature: 2297.405152 pixels
-    
-    ./output_images/Test Image 5
-    Left Radius of Curvature: 2944.919504 pixels
-    Right Radius of Curvature: 4505.052710 pixels
-    
-    ./output_images/Test Image 6
-    Left Radius of Curvature: 6720.150913 pixels
-    Right Radius of Curvature: 51563.838071 pixels
-    
+| Image                        | Left Radius of Curvature  | Right Radius of Curvature|
+|------------------------------|:-------------------------:|-------------------------:|
+|./output_images/Test Image 1  | 8598.589955 pixels        | 1043.128913 pixels       |
+|./output_images/Test Image 2  | 2569.221597 pixels        | 5177.963706 pixels       |
+|./output_images/Test Image 3  | 12397.838429 pixels       | 2824.754859 pixels       |
+|./output_images/Test Image 4  | 6091.692407 pixels        | 2297.405152 pixels       |
+|./output_images/Test Image 5  | 2944.919504 pixels        | 4505.052710 pixels       |
+|./output_images/Test Image 6  | 6720.150913 pixels        | 51563.838071 pixels      |
 
 
 ### Convert pixels space to meters in x and y  
@@ -1143,72 +1126,14 @@ img_path = TST_IMG_PATH + 'test*.jpg'
 rocInMeters(img_path, 'Radius of Curvature')
 ```
 
-    test_images  6
-
-
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:8: RankWarning: Polyfit may be poorly conditioned
-      
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
-
-    Test Image 1
-    Left Radius of Curvature: 330.703711 meters
-    Right Radius of Curvature: 1800.918217 meters
-    
-
-
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:8: RankWarning: Polyfit may be poorly conditioned
-      
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
-
-    Test Image 2
-    Left Radius of Curvature: 391.108695 meters
-    Right Radius of Curvature: 1652.240259 meters
-    
-
-
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
-
-    Test Image 3
-    Left Radius of Curvature: 9402773536.712368 meters
-    Right Radius of Curvature: 1466.493391 meters
-    
-
-
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:8: RankWarning: Polyfit may be poorly conditioned
-      
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
-
-    Test Image 4
-    Left Radius of Curvature: 361.509775 meters
-    Right Radius of Curvature: 1427.350755 meters
-    
-
-
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
-
-    Test Image 5
-    Left Radius of Curvature: 4938097016.188563 meters
-    Right Radius of Curvature: 1430.943424 meters
-    
-    Test Image 6
-    Left Radius of Curvature: 4075266047.869807 meters
-    Right Radius of Curvature: 1484.910897 meters
-    
-
-
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
+| Image                        | Left Radius of Curvature  | Right Radius of Curvature|
+|------------------------------|:-------------------------:|-------------------------:|
+|./output_images/Test Image 1  | 330.703711 meters         | 1800.918217 meters       |
+|./output_images/Test Image 2  | 391.108695 meters         | 1652.240259 meters       |
+|./output_images/Test Image 3  | 9402773536.712368 meters  | 1466.493391 meters       |
+|./output_images/Test Image 4  | 361.509775 meters         | 1427.350755 meters       |
+|./output_images/Test Image 5  | 4938097016.188563 meters  | 1430.943424 meters       |
+|./output_images/Test Image 6  | 4075266047.869807 meters  | 1484.910897 meters       |
 
 ### Determining Vehicle Position with respect to Center
 
@@ -1248,26 +1173,14 @@ img_path = TST_IMG_PATH + 'test*.jpg'
 cameraOffset(img_path,'Camera Offset')
 ```
 
-    test_images  6
-    Test Image: 1
-    Offset from Lane Center: -0.113750 meters
-    
-    Test Image: 2
-    Offset from Lane Center: -0.190750 meters
-    
-    Test Image: 3
-    Offset from Lane Center: -0.176750 meters
-    
-    Test Image: 4
-    Offset from Lane Center: -0.217000 meters
-    
-    Test Image: 5
-    Offset from Lane Center: -0.063000 meters
-    
-    Test Image: 6
-    Offset from Lane Center: -0.315000 meters
-    
-
+| Image                        | Offset from Lane Center                              |
+|------------------------------|:----------------------------------------------------:|
+|./output_images/Test Image 1  | -0.113750 meters                                     |
+|./output_images/Test Image 2  | -0.190750 meters                                     |
+|./output_images/Test Image 3  | -0.176750 meters                                     |
+|./output_images/Test Image 4  | -0.217000 meters                                     |
+|./output_images/Test Image 5  | -0.063000 meters                                     |
+|./output_images/Test Image 6  | -0.315000 meters                                     |
 
 
 ```python
