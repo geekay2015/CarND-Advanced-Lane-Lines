@@ -1488,6 +1488,10 @@ Click on the image or link below to view the video results of the project.
 
 ### P4_video_final.mp4
 https://youtu.be/EOi2E8rn2NQ
+
+<a href="https://www.youtube.com/watch?v=EOi2E8rn2NQ&feature=youtu.be
+" target="_blank"><img src="http://img.youtube.com/vi/5ZKbpNY-rok/0.jpg" 
+alt="YouTube" width="240" height="180" border="10" /></a>
  
 
 ```python
