@@ -1,6 +1,6 @@
 
 # Advanced Lane Finding
-----
+
 The challenge in this project is to create a improved lane finding algorithm, using computer vision techniques.
 
 The following are the main goals of this project:
@@ -15,7 +15,7 @@ The following are the main goals of this project:
 - Run the entire pipeline on a sample video recorded on a sunny day on the I-280.
 
 # Import the required packages
-----
+
 
 
 ```python
@@ -39,7 +39,7 @@ TST_IMG_PATH = "./test_images/"
 ```
 
 # The Pipeline
------
+
 Overall, my pipeline looks like the following:
 
 ![Project Pipeline](output_images/project_pipeline.png?raw=true "pipeline")
@@ -54,7 +54,7 @@ Overall, my pipeline looks like the following:
 7. Draw lines
 
 ## Step 1 : Camera Calibration
-----
+
 
 Real cameras use curved lenses to form an image, and light rays often bend a little too much or too little at the edges of these lenses. This creates an effect that distorts the edges of images, so that lines or objects appear more or less curved than they actually are. This is called radial distortion, which is the most common type of distortion.
 
@@ -148,7 +148,7 @@ calibrate_camera(CAM_IMG_PATH + "calibration3.jpg")
 
 
 ## Step 2: Undistort Image
-----
+
 Image distortion occurs when a camera looks at 3D objects in the real world and transforms them into a 2D image; this transformation isn’t perfect. Distortion actually changes what the shape and size of these 3D objects appear to be. So, the first step in analyzing camera images, is to undo this distortion so that you can get correct and useful information out of them.
 
 
@@ -238,7 +238,7 @@ undistort_images(img_path, 'Distortion Corrected Test')
 
 
 ## Step 3: Binary Thresholding
-----
+
 
 The Thresholding stage is where we process the undistorted image and attempt to mask out which pixels are part of the lanes and remove those that are not. This sounds far easier than it actually is.
 I have a mini-pipeline for this stage which looks like the following:
@@ -617,7 +617,7 @@ combined_thresholds(img_path, 'Combined thresholded Test')
 Taking a look at the above output, it seems like the combined thresholding does relatively well on the simple examples, but there are still difficulties with the challenge images. Note that the noise in the rest of the image will be masked away later so we can just aim to better highlight the lane lines using color thresholding.
 
 ## Step 4: Perspective Transform
-----
+
 Once I have the binary threshold images above, I applied a perspective transform on the image to generate an image with the effect of looking down on the road from above. 
 
 A perspective transform maps the points in a given image to different, desired, image points with a new perspective. The perspective transform you’ll be most interested in is a bird’s-eye view transform that let’s us view a lane from above; this will be useful for calculating the lane curvature later on. Aside from creating a bird’s eye view representation of an image, a perspective transform can also be used for all kinds of different view points.
@@ -777,7 +777,7 @@ transformPerspective(img_path, 'Perspective Transform Test')
 After I have applied the perspective transform to the binary threshold image, I get an image that looks that lanes from above, similar to the below.
 
 ## Step 5: Locate Lanes
-----
+
 This stage is where we will try to extract the actual lane pixels for both the left and right lanes from the above image.
 
 For the first frame from a camera, or for cases where we lanes are ‘lost’ (i.e. we have not been able to reliably detect a ‘good’ lane for a number of frames), I generate a histogram of the bottom half of the image. Then using the two peaks in this histogram, I determine a good starting point to start
@@ -824,7 +824,7 @@ def annotate(img, left_curverad, right_curverad, camera):
 
 
 ## Step 6: Fit Lanes
-----
+
 ### Sliding Window Search and Polynomial Line Fitting
 Next we can try to figure out where the lane lines are and how much curvature are in the lane lines. In order to find the lane lines, we can create a histogram with the columns of the image intensities summed together. This would return higher values for areas where there are higher intensities (lane lines).
 
@@ -1037,7 +1037,7 @@ shadedLanes(img_path, 'Shade Lanes')
 In the above example, we can see that the lane lines are quite well defined and the fitted line is also quite accurate! Next, we define a new function that can take in the fit of the last frame (of a video, if there is one) and search only in an area that is close to the previous image's lane lines.
 
 ## Step 7: Draw Lanes
-----
+
 ### Determining Lane Curvature & Warping to Original Image
 
 ```python
@@ -1358,23 +1358,8 @@ ax2.imshow(cv2.cvtColor(out_img, cv2.COLOR_BGR2RGB), cmap='gray')
 ax2.set_title('Test 1 Output:', fontsize=15)
 ```
 
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:8: RankWarning: Polyfit may be poorly conditioned
-      
-    /Users/gangadharkadam/anaconda/envs/carnd-term1/lib/python3.5/site-packages/ipykernel_launcher.py:9: RankWarning: Polyfit may be poorly conditioned
-      if __name__ == '__main__':
-
-
-
-
-
-    Text(0.5,1,'Test 1 Output:')
-
-
-
 
 ![png](AdvancedLaneFinding_files/AdvancedLaneFinding_43_2.png)
-
-
 
 ```python
 from moviepy.editor import VideoFileClip
@@ -1385,6 +1370,7 @@ clip = VideoFileClip('project_video.mp4')
 output_clip = clip.fl_image(video_pipeline)
 %time output_clip.write_videofile(video_output, audio=False)
 ```
+
 
     [MoviePy] >>>> Building video project_video_output.mp4
     [MoviePy] Writing video project_video_output.mp4
