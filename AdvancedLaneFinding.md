@@ -147,7 +147,7 @@ calibrate_camera(CAM_IMG_PATH + "calibration3.jpg")
 ![png](AdvancedLaneFinding_files/AdvancedLaneFinding_5_1.png)
 
 
-## Step 2: Distortion Correction
+## Step 2: Undistort Image
 ----
 Image distortion occurs when a camera looks at 3D objects in the real world and transforms them into a 2D image; this transformation isn’t perfect. Distortion actually changes what the shape and size of these 3D objects appear to be. So, the first step in analyzing camera images, is to undo this distortion so that you can get correct and useful information out of them.
 
@@ -822,6 +822,9 @@ def annotate(img, left_curverad, right_curverad, camera):
     cv2.putText(img, 'Camera Offset: {0:6f} meters'.format(camera), (10,90), font, 1, (255,255,255), 2)
 ```
 
+
+## Step 6: Fit Lanes
+----
 ### Sliding Window Search and Polynomial Line Fitting
 Next we can try to figure out where the lane lines are and how much curvature are in the lane lines. In order to find the lane lines, we can create a histogram with the columns of the image intensities summed together. This would return higher values for areas where there are higher intensities (lane lines).
 
@@ -1033,9 +1036,9 @@ shadedLanes(img_path, 'Shade Lanes')
 
 In the above example, we can see that the lane lines are quite well defined and the fitted line is also quite accurate! Next, we define a new function that can take in the fit of the last frame (of a video, if there is one) and search only in an area that is close to the previous image's lane lines.
 
-## Step 6: Determining Lane Curvature & Warping to Original Image
+## Step 7: Draw Lanes
 ----
-
+### Determining Lane Curvature & Warping to Original Image
 
 ```python
 ## Determine the curvature of the lane
