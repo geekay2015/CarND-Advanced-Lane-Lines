@@ -1484,6 +1484,11 @@ output_clip = clip.fl_image(video_pipeline)
     Wall time: 6min 2s
 
 
+Click on the image or link below to view the video results of the project.
+
+### P4_video_final.mp4
+https://youtu.be/EOi2E8rn2NQ
+ 
 
 ```python
 import imageio
