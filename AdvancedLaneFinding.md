@@ -27,6 +27,9 @@ The following are the main goals of this project:
 3. `project_video_output.mp4`
     * Containt video output from my pipeline. 
     Here's a [link to my video output](https://youtu.be/EOi2E8rn2NQ)
+4. `AdvancedLaneFinding_files`
+    * a directory containg the output files from AdvancedLaneFinding.ipynb jupyter notebook.
+    * The output files can be seen [MyOutputFIles](CarND-Advanced-Lane-Lines/AdvancedLaneFinding_files)
 
 <a href="https://www.youtube.com/watch?v=EOi2E8rn2NQ&feature=youtu.be
 " target="_blank"><img src="http://img.youtube.com/vi/5ZKbpNY-rok/0.jpg" 
