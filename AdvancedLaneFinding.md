@@ -1,6 +1,8 @@
 
 # Advanced Lane Finding
 
+![png](AdvancedLaneFinding_files/AdvancedLaneFinding_43_2.png)
+
 The challenge in this project is to create a improved lane finding algorithm, using computer vision techniques.
 
 The following are the main goals of this project:
@@ -18,10 +20,10 @@ The following are the main goals of this project:
 
 1. `AdvancedLaneFinding.ipynb` 
     * Contains the complete for code for the advance lane line detection pipelines
-    * The file can be seen ![here](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.ipynb)
+    * The file can be seen [MyProjectCode](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.ipynb)
 2. `AdvancedLaneFinding.md`
     * conatins all the rubric points and how I addressed each one with examples.
-    * The file can be seen ![here](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.md)
+    * The file can be seen [MyProjectWritup](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.md)
 3. `project_video_output.mp4`
     * Containt video output from my pipeline. 
     Here's a [link to my video output](https://youtu.be/EOi2E8rn2NQ)
@@ -29,6 +31,11 @@ The following are the main goals of this project:
 <a href="https://www.youtube.com/watch?v=EOi2E8rn2NQ&feature=youtu.be
 " target="_blank"><img src="http://img.youtube.com/vi/5ZKbpNY-rok/0.jpg" 
 alt="YouTube" width="240" height="180" border="10" /></a>
+
+
+
+
+**Project Code**
 
 
 # Import the required packages
