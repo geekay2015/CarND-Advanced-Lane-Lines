@@ -20,10 +20,10 @@ The following are the main goals of this project:
 
 1. `AdvancedLaneFinding.ipynb` 
     * Contains the complete for code for the advance lane line detection pipelines
-    * The file can be seen [MyProjectCode](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.ipynb)
+    * The file can be seen at [MyProjectCode](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.ipynb)
 2. `AdvancedLaneFinding.md`
     * conatins all the rubric points and how I addressed each one with examples.
-    * The file can be seen [MyProjectWritup](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.md)
+    * The file can be seen at [MyProjectWritup](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.md)
 3. `project_video_output.mp4`
     * Containt video output from my pipeline. 
     Here's a [link to my video output](https://youtu.be/EOi2E8rn2NQ)
