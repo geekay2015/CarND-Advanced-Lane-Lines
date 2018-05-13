@@ -14,9 +14,24 @@ The following are the main goals of this project:
 - Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 - Run the entire pipeline on a sample video recorded on a sunny day on the I-280.
 
+## Rubric Files
+
+1. `AdvancedLaneFinding.ipynb` 
+    * Contains the complete for code for the advance lane line detection pipelines
+    * The file can be seen ![here](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.ipynb)
+2. `AdvancedLaneFinding.md`
+    * conatins all the rubric points and how I addressed each one with examples.
+    * The file can be seen ![here](CarND-Advanced-Lane-Lines/AdvancedLaneFinding.md)
+3. `project_video_output.mp4`
+    * Containt video output from my pipeline. 
+    Here's a [link to my video output](https://youtu.be/EOi2E8rn2NQ)
+
+<a href="https://www.youtube.com/watch?v=EOi2E8rn2NQ&feature=youtu.be
+" target="_blank"><img src="http://img.youtube.com/vi/5ZKbpNY-rok/0.jpg" 
+alt="YouTube" width="240" height="180" border="10" /></a>
+
+
 # Import the required packages
-
-
 
 ```python
 import numpy as np
@@ -43,7 +58,6 @@ TST_IMG_PATH = "./test_images/"
 Overall, my pipeline looks like the following:
 
 ![Project Pipeline](output_images/project_pipeline.png?raw=true "pipeline")
-
 
 1. Camera calibration
 2. Distortion correction
@@ -1438,3 +1452,20 @@ convertFile("project_video_output.mp4", TargetFormat.GIF)
 ```python
 
 ```
+
+## Discussion
+Overall, this project was really interesting because it was a great extension to the first lane finding project that I worked on. However, I got to use more advanced techniques to solve the same problem. Although the project was interesting, it was also quite difficult and time consuming.
+
+Below I will discuss some of the difficulties of the project and also some of the places where the pipeline might fail.
+1. **camera calibration error**
+It looks like you I made some mistake with the camera calibration and becusue of that undistorted images were showing the black space in the top right corner.I revisit the lessons on camera calibration and with some tweaks in the way I was calculating the camera matrix and distortion coefficients, the undistorted images now showing straight lines and also ther are no black space in the top right corner of the images. so fixing this fixed all cascading issues in the project so that was a good learning.
+
+. **Outliers** - In order to build a robust pipeline it is important to take into account the anomalies that might surface in an onboard camera feed. In a few cases there were areas of the road that was obstructed by shadows or different colored pavements. It was important to account for these anomalies by building a function that takes into account the past lane curves and averages to find the "best" fit. This helped to smooth the resulting video of the detected lane lines.
+3. **Thresholding** - A lot of the time was spent refining the thresholding functions. For the most part, the color thresholding performed the best, but it took a lot of trial and error to correctly select the colors from the different color channels. One important observation was that it is helpful to use different color spaces for retrieving different color lane lines.
+4. **Unexpected Inputs** - While the pipeline performs quite well on the videos given, it might not perform well on videos that have a lot of unseen elements, such as large curves and bends, uneven lighting, or lane changing situations. Ideally a self-driving car would take these into account.
+
+## Next Steps and Conclusion
+
+The project was extremely rewarding and moving forward there are a lot of improvements that can be implemented. For example, there might be more opportunities to use machine learning to learn how to demarcate the lane lines rather than just use computer vision techniques to extract the lane lines. The difficulty with just using image processing techniques is that there might be situations that are unaccounted for (although if we have no training data a machine learning algorithm would not perform much better).
+
+I am excited to continue researching and learning about this space. There are also very interesting feature extraction techniques that I would like to explore to better be able to detect lane lines.
